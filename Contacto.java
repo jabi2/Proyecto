@@ -20,11 +20,12 @@ class Contacto
 	{
 		this.nombre = nombre;
 		this.numero = numero;
+		Infos();
 	}
 	
   public void Infos()
 	{
-		System.out.println("¿Desea agregar información adicional? (Si = 1, No = 0)");
+		System.out.println("\n¿Desea agregar información adicional? (Si = 1, No = 0)");
 		if (scan.nextInt()== 1)
 		{
 			info = scan.nextLine();
