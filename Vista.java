@@ -4,7 +4,7 @@ Clase Vista
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Vista del programa, permite al usuario interactuar con el programa y mostrar informacion relevante.
 Version: 1.0
-Ultima actualizacion: 12 de septiembre
+Ultima actualizacion: 26 de septiembre
 ******************************************************************/
 /*Se importa scanner para poder leer los datos ingresados por el usuario*/
 import java.util.Scanner;
@@ -28,7 +28,7 @@ public class Vista{
 
   public void menuP(){
     /*Se crea el menú de opciones que se le presentará al usuario para que el mismo pueda escoger la opción deseada*/
-    
+    System.out.println("\n------------MENÚ-------------");
     System.out.println("1. Cursos\n");
 		System.out.println("2. Programas Universitarios\n");
 		System.out.println("3. Contactos para tutorías\n");
@@ -42,5 +42,14 @@ public class Vista{
 
   public void valid1(){
     System.out.println("Elige una opción dentro del rango [1, 4].\n");
+  }
+  public void mostrarCursos(String[][] c){
+    //Ciclos anidados que recorrerán la matriz.
+    for (int i = 0; i < 4; i++)
+    {
+      System.out.println("\nClases de " + c[0][i]);
+
+      for (int j = 1; j < 4; j++) System.out.println(j+". "+c[j][i]+"\n");
+    }
   }
 }

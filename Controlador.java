@@ -4,13 +4,14 @@ Clase Controlador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Controlador del programa
 Version: 1.0
-Ultima actualizacion: 12 de septiembre
+Ultima actualizacion: 26 de septiembre
 ******************************************************************/
 
 class Controlador{
   public static void main(String[] args){
     int opcion = 0;
     Vista vista = new Vista();
+    Cursos cs = new Cursos();
     
     vista.bienvenida();
 
@@ -23,7 +24,10 @@ class Controlador{
       /*cada condición permite el ingreso al método estipulado para cada opción*/
       if (opcion == 1)
       {
-        //Aquí se ejecuta lo que respecta a los cursos.
+        String[][] cursos  = new String[4][4];
+        cursos = cs.getCursos();
+
+        vista.mostrarCursos(cursos);
       }
       else if (opcion == 2)
       {

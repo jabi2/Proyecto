@@ -1,8 +1,8 @@
 /**********************
 Proyecto POO 
-Clase Controlador
+Clase Contacto
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
-Descripcion: Crea y guarda contactos que se quieran agregar al programa.
+Descripcion: Clase que se encargará del contacto de las tutorías.
 Version: 1.0
 Ultima actualizacion: 19 de septiembre
 ******************************************************************/
