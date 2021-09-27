@@ -8,7 +8,7 @@ Ultima actualizacion: 19 de septiembre
 ******************************************************************/
 
 import java.util.Scanner;
-class Contacto
+public class Contacto
 {
 	Scanner scan = new Scanner(System.in);
 

@@ -14,7 +14,7 @@ class Libreta
 	Scanner scan = new Scanner(System.in);
 	private String nombre = "";
 	private int numero = 0;
-	private ArrayList<Contacto> contactoss = new ArrayList<Contacto>;
+	private ArrayList<Contacto> contactoss = new ArrayList<Contacto>();
 
 	public Libreta()
 	{
@@ -30,9 +30,4 @@ class Libreta
 		Contacto contacto = new Contacto(nombre, numero);
 		contactoss.add(contacto);
 		System.out.println("\nSe agregó el contacto.\n");
-
-		
-
-
-
 	}
