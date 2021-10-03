@@ -8,6 +8,7 @@ Ultima actualizacion: 26 de septiembre
 ******************************************************************/
 /*Se importa scanner para poder leer los datos ingresados por el usuario*/
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Vista{
   private Scanner scan;
@@ -17,7 +18,9 @@ public class Vista{
   }
 
   public void bienvenida(){
-    System.out.println("Bienvenido al programa que busca apoyar al rendimiento y desarrollo de los estudiantes.");
+    System.out.println("\nBienvenido, estimado estudiante.");
+    System.out.println("El objetivo del presente programa es brindar ayuda a la población guatemalteca para que se lleve a cabo el Objetivo de Desarrollo Sostenible 4: educación de calidad.");
+    System.out.println("Esta aplicación tiene como servicios el dar información de un tema en específico para que pueda ser estudiado por ti, y luego evaluarte para darte una retroalimentación al respecto. Del mismo modo, también se pueden buscar universidades de acuerdo a la situación económica y el nivel que se desea cursar (licenciatura, maestría o doctorado). Asimismo, el programa también puede ofrecer números telefónicos y correos electrónicos de personas que puedan ofrecer tutorías de un curso con el que tengas dificultad.\nEsperamos que nuestro programa sea de utilidad.");
   }
 
   public int queOpcion(){
@@ -51,5 +54,35 @@ public class Vista{
 
       for (int j = 1; j < 4; j++) System.out.println(j+". "+c[j][i]+"\n");
     }
+  }
+
+  public int queCurso(){
+    System.out.println("\n Tenemos personas especializadas en las siguientes áreas:");
+    System.out.println("1. Matemática\n2. Física\n3. Química\n4. Biología");
+    System.out.print("¿En qué curso necesitas ayuda? Ingresa el número de opción que te interese...");
+    
+    boolean bandera = false;
+    int op = 0;
+
+    op = scan.nextInt();
+
+    return op;
+  }
+
+  public void mostrarTutores(int i, ArrayList<Contacto> v){
+    System.out.print("\nTenemos registrados a los siguientes tutores en el área de ");
+    if (i == 1) System.out.print("matemática:\n");
+    else if (i == 2) System.out.print("física:\n");
+    else if (i == 3) System.out.print("química:\n");
+    else System.out.print("biología:\n");
+
+    int cont = 1;
+
+    for (int j = 0; j < v.size(); j++)
+      if (v.get(j).getCursoA() == i)
+      {
+        System.out.println(cont + ". " + v.get(j).toString() + "\n");
+        cont++;
+      }
   }
 }

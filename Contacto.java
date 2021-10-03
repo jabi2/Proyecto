@@ -7,33 +7,26 @@ Version: 1.0
 Ultima actualizacion: 19 de septiembre
 ******************************************************************/
 
-import java.util.Scanner;
 public class Contacto
 {
-	Scanner scan = new Scanner(System.in);
+	private String nombre;
+  private String correo;
+  private int numero;
+  private int cursoA;
 
-	private String nombre = "";
-  private String info = "";
-  private int numero = 0;
-
-	public Contacto(String nombre, int numero)
+	public Contacto(String nombre, String correo, int numero, int cursoA)
 	{
 		this.nombre = nombre;
+    this.correo = correo;
 		this.numero = numero;
-		Infos();
+    this.cursoA = cursoA;
 	}
-	
-  public void Infos()
-	{
-		System.out.println("\n¿Desea agregar información adicional? (Si = 1, No = 0)");
-		if (scan.nextInt()== 1)
-		{
-			info = scan.nextLine();
-		} else
-		{
-			info = "";
-		}
 
-	}
-  
+  public String toString(){
+    return "Nombre del tutor: " + nombre + ", número de teléfono: " + numero + ", correo electrónico: " + correo + ".";
+  }
+
+  public int getCursoA(){
+    return cursoA;
+  }
 }

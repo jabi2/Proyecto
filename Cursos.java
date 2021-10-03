@@ -4,12 +4,14 @@ Clase Cursos
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Clase que se encargará de los cursos que nuestro programa (servicio) proporcionará.
 Version: 1.0
-Ultima actualizacion: 26 de septiembre
+Ultima actualizacion: 30 de septiembre
 ******************************************************************/
 
 public class Cursos{
   private String[][] cursos;
 // Función que muestra una matriz de las clases de cursos de cada una.
+
+  //Constructor de la clase.
   public Cursos(){
     cursos = new String[4][4];
 

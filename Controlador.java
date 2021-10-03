@@ -6,12 +6,13 @@ Descripcion: Controlador del programa
 Version: 1.0
 Ultima actualizacion: 26 de septiembre
 ******************************************************************/
-
+import java.util.ArrayList;
 class Controlador{
   public static void main(String[] args){
     int opcion = 0;
     Vista vista = new Vista();
     Cursos cs = new Cursos();
+		PaginasInfo pinfo = new PaginasInfo();
     
     vista.bienvenida();
 
@@ -31,10 +32,18 @@ class Controlador{
       }
       else if (opcion == 2)
       {
-        //Aquí se ejecuta lo que respecta a los programas universitarios.
+        //Aquí se ejecuta lo que respecta a las universidades.
       }
       else if (opcion == 3)
       {
+        Libreta lb = new Libreta();
+        
+        int eleccion = 0;
+        eleccion = vista.queCurso();
+
+        vista.mostrarTutores(eleccion, lb.getLibretaC());
+        
+				//pinfo.openUVG();
         //Aquí se ejecuta lo que respecta a los contactos para tutorías.
       }
       else if (opcion == 4) vista.despedida();
