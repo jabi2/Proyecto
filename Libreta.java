@@ -11,6 +11,11 @@ import java.util.ArrayList;
 public class Libreta{
 	private ArrayList<Contacto> contactoss;
 
+  /********************************
+     * @param: -
+     * @return: -
+     */
+  //Es el constructor de la clase.
 	public Libreta()
 	{
     contactoss = new ArrayList<Contacto>();
@@ -56,6 +61,10 @@ public class Libreta{
     contactoss.add(c);
 	}
 
+  /********************************
+     * @param: -
+     * @return: Un ArrayList de contactos.
+     */
   public ArrayList<Contacto> getLibretaC(){
     return contactoss;
   }

@@ -30,11 +30,8 @@ class Controlador{
 
         int queCurso = vista.mostrarCursos(cursos);
 
-        if (queCurso == 1)
-        {
-          
-        }
-        else if (queCurso == 2)
+        if (queCurso == 1) pinfo.openHis();
+        else if (queCurso == 2) pinfo.open
         {
 
         }

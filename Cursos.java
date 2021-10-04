@@ -11,6 +11,10 @@ public class Cursos{
   private String[][] cursos;
 // Función que muestra una matriz de las clases de cursos de cada una.
 
+  /********************************
+     * @param: -
+     * @return: -
+     */
   //Constructor de la clase.
   public Cursos(){
     cursos = new String[4][4];
@@ -42,6 +46,10 @@ public class Cursos{
     cursos[3][3]="Geometría";
   }
 
+  /********************************
+     * @param: -
+     * @return: Una matriz con los cursos.
+     */
   public String[][] getCursos(){
     return cursos;
   }

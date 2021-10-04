@@ -1,6 +1,14 @@
-
+/**********************
+Proyecto POO 
+Clase Cuestionario
+Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
+Descripcion: Clase que se encargará de generar el cuestionario con las preguntas y sus respectivas respuestas.
+Version: 1.0
+Ultima actualizacion: 3 de octubre
+******************************************************************/
 
 public class Cuestionario{
+  //Declaración de propiedades.
   private String pregunta1;
   private int respuesta1;
 
@@ -15,6 +23,11 @@ public class Cuestionario{
 
   private String[] opciones;
 
+  /********************************
+     * @param: Un entero que indicará el tipo de cuestionario.
+     * @return: -
+     */
+  //Constructor de la clase.
   public Cuestionario(int indice){
     if (indice == 1)
     {
@@ -258,6 +271,10 @@ public class Cuestionario{
     }
   }
 
+  /********************************
+     * @param: Un entero que indica el número de pregunta a retornar.
+     * @return: La cadena de la pregunta.
+     */
   public String getPregunta(int n){
     if (n == 0) return pregunta1;
     else if (n == 1) return pregunta2;
@@ -265,6 +282,10 @@ public class Cuestionario{
     else return pregunta4;
   }
 
+  /********************************
+     * @param: Entero que indica el número de respuesta a retornar.
+     * @return: El número de la respuesta correcta.
+     */
   public int getRespuesta(int n){
     if (n == 0) return respuesta1;
     else if (n == 1) return respuesta2;
@@ -272,6 +293,10 @@ public class Cuestionario{
     else return respuesta4;
   }
 
+  /********************************
+     * @param: -
+     * @return: Un vector de las opciones múltiples.
+     */
   public String[] getOpciones(){
     return opciones;
   }
