@@ -13,10 +13,12 @@ import java.util.ArrayList;
 public class Vista{
   private Scanner scan;
 
+  //Constructor de vista.
   public Vista(){
     scan = new Scanner(System.in);
   }
 
+  //Mensaje de bienvenida al usuario.
   public void bienvenida(){
     System.out.println("\nBienvenido, estimado estudiante.");
     System.out.println("El objetivo del presente programa es brindar ayuda a la población guatemalteca para que se lleve a cabo el Objetivo de Desarrollo Sostenible 4: educación de calidad.");
