@@ -4,7 +4,7 @@ import java.awt.Desktop;
 import java.net.URI;
 import java.net.URL;
 
-class PaginasInfo
+public class PaginasInfo
 {
 	public static void openWebpage(String urlString) {
   try {
@@ -64,7 +64,7 @@ class PaginasInfo
 		openWebpage("https://es.khanacademy.org/math/algebra");
 	}
 
-  	public void openalgeometría()
+  	public void opengeometría()
 	{
 		openWebpage("https://es.khanacademy.org/math/geometry");
 	}
