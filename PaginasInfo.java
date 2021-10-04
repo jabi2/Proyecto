@@ -58,4 +58,15 @@ class PaginasInfo
 	{
 		openWebpage("https://es.khanacademy.org/math/calculus-all-old");
 	}
+
+	public void openalgebra()
+	{
+		openWebpage("https://es.khanacademy.org/math/algebra");
+	}
+
+  	public void openalgeometría()
+	{
+		openWebpage("https://es.khanacademy.org/math/geometry");
+	}
+
 }

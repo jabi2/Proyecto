@@ -46,6 +46,7 @@ public class Vista{
   public void valid1(){
     System.out.println("Elige una opción dentro del rango [1, 4].\n");
   }
+  
   public int mostrarCursos(String[][] c){
     int cont = 1;
 
