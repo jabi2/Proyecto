@@ -4,7 +4,7 @@ Clase Cursos
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Clase que se encargará de los cursos que nuestro programa (servicio) proporcionará.
 Version: 1.0
-Ultima actualizacion: 30 de septiembre
+Ultima actualizacion: 3 de octubre
 ******************************************************************/
 
 public class Cursos{
@@ -24,7 +24,7 @@ public class Cursos{
     //Asignación de los cursos de humanidades.
     cursos[1][0]="Filosofía";
     cursos[2][0]="Ética";
-    cursos[3][0]="Antropología";
+    cursos[3][0]="Historia";
 
     //Asignación de los cursos de ciencias.
     cursos[1][1]="Química";
