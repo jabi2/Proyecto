@@ -3,8 +3,8 @@ Proyecto POO
 Clase Controlador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Maneja la creación de los contactos y los guarda en una lista de arreglos dinámica.
-Version: 1.0
-Ultima actualizacion: 3 de octubre
+Version: 1.2
+Ultima actualizacion: 10 de octubre
 ******************************************************************/
 
 import java.util.ArrayList;
@@ -60,6 +60,10 @@ public class Libreta{
     c = new Contacto("Marian López", "mlopez@hotmail.com", 48956123, 4);
     contactoss.add(c);
 	}
+
+	/**
+	Se modificará esta clase y se integrará la permanencia de datos, guardando esta información en un archivo, ya sea .txt , .csv u otro.
+	**/
 
   /********************************
      * @param: -

@@ -1,4 +1,11 @@
-
+/**********************
+Proyecto POO
+Clase PaginasInfo
+Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
+Descripcion: Clase que se encargará de guardar y abrir los links de las paginas web usadas.
+Version: 1.0
+Ultima actualizacion: 10 de octubre
+******************************************************************/
 
 import java.awt.Desktop;
 import java.net.URI;
