@@ -3,8 +3,8 @@ Proyecto POO
 Clase Guardador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Permite extraer los contactos de un archivo en donde estén guardados y así utilizarlos en el programa. 
-Version: 1.0
-Ultima actualizacion: 10 de octubre
+Version: 1.1
+Ultima actualizacion: 17 de octubre
 ******************************************************************/
 
 /** 
@@ -30,15 +30,19 @@ public class Guardador{
 	try {
 		BufferedReader br = new BufferedReader(new FileReader(path));	
 
+		//Ciclo while para leer el archivo seleccionado entero
 		while((line = br.readLine()) != null){
-			System.out.println(line);
+			//System.out.println(line);
+			//Almacenador de datos en un array
 			String[] values = line.split(",");
 			System.out.println(values[0]);
 		}
 
+		//Bloques de catch para detener el codigo cuando el archivo se acaba
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
 
+//Documentacion de la clase BufferedReader: https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html
