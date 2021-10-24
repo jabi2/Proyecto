@@ -25,10 +25,8 @@ public class Cursos{
     cursos[0][2]="Arte";
     cursos[0][3]="Matemáticas";
 
-    //Asignación de los cursos de humanidades.
-    cursos[1][0]="Filosofía";
-    cursos[2][0]="Ética";
-    cursos[3][0]="Historia";
+    //Asignación del curso de humanidades.
+    cursos[1][0]="Historia";
 
     //Asignación de los cursos de ciencias.
     cursos[1][1]="Química";

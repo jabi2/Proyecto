@@ -102,7 +102,7 @@ public class Vista{
     {
       System.out.println("\nClases de " + c[0][i]);
 
-      for (int j = 1; j < 4; j++)
+      for (int j = 1; (j < 4) && (c[j][i]!=null); j++)
       {
         System.out.println(cont+". "+c[j][i]+"\n");
         cont++;
@@ -129,6 +129,10 @@ public class Vista{
       }
 
     return op;
+  }
+
+  public void avisoPag(){
+    System.out.println("\nA continuación se abrirá una página web donde podrás estudiar el tema que escogiste.");
   }
 
   /********************************
@@ -175,60 +179,10 @@ public class Vista{
     int cont = 1;
 
     for (int j = 0; j < v.size(); j++)
-      if (v.get(j).getCursoA() == i)
+      if (Integer.parseInt(v.get(j).getCurso()) == i)
       {
         System.out.println(cont + ". " + v.get(j).toString() + "\n");
         cont++;
       }
-  }
-
-  /********************************
-     * @param: Un cuestionario c con las preguntas.
-     * @return: Un vector de respuestas.
-     */
-  public int[] hacerCuestionario(Cuestionario c){
-    
-    int[] rs = new int[4];
-    
-    for (int i = 0 ; i < 4; i++)
-    {
-      System.out.println("\nPregunta " + (i + 1));
-      c.getPregunta(i);
-      boolean bandera = false;
-      int op = 0;
-
-      while (!bandera)
-        try
-        {
-          System.out.println("Respuesta (el número): ");
-          op = scan.nextInt();
-
-          if ((op >= 1) && (op <= 3)) bandera = true;
-          else System.out.println("Ingresa solo opciones dentro del rango [1, 3].");
-        }
-        catch (InputMismatchException e)
-        {
-          scan.next();
-          bandera = false;
-          System.out.println("\nIngresa números enteros solamente.");
-        }
-
-      rs[i] = op;
-    }
-
-    return rs;
-  }
-
-  /********************************
-     * @param: La calificación del usuario.
-     * @return: -
-     */
-  public void retroalimentacion(int resultado){
-    System.out.println("\nTu calificación final en este cuestionario es " + resultado + "\nRetroalimentación:");
-
-    if ((resultado == 0) || (resultado == 25)) System.out.println("\nDebes repasar mucho más este tema, ¡vamos! Tú puedes, solo vuelve a leer el documento y practicar.");
-    else if (resultado == 50) System.out.println("\nTe aconsejamos que leas de nuevo la página, y practica mentalmente antes de hacer este cuestionario.");
-    else if (resultado == 75) System.out.println("\n¡Bien hecho! Solo hace falta pulir pequeños detalles, pero ya casi lo tienes.");
-    else System.out.println("\n¡Muchas felicidades! Sabes mucho de este tema, pero no te conformes con esto, sigue construyendo tu conocimiento.");
   }
 }

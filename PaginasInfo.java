@@ -21,6 +21,10 @@ public class PaginasInfo
     }
   }
 
+  public void open(String pag){
+    openWebpage(pag);
+  }
+
   /********************************
      * @param: -
      * @return: -

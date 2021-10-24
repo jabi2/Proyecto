@@ -3,30 +3,47 @@ Proyecto POO
 Clase Contacto
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Clase que se encargará del contacto de las tutorías.
-Version: 1.0
-Ultima actualizacion: 3 de octubre
+Version: 1.2
+Ultima actualizacion: 23 de octubre
 ******************************************************************/
 
 public class Contacto
 {
   //Declaración de las propiedades.
-	private String nombre;
+  private String nombre;
   private String correo;
-  private int numero;
-  private int cursoA;
+  private String numero;
+  private String cursoA;
 
   /********************************
      * @param: El nombre, correo, número y número del curso que da el tutor.
      * @return: -
      */
   //Constructor de la clase.
-	public Contacto(String nombre, String correo, int numero, int cursoA)
+	public Contacto(String nombre, String correo, String numero, String cursoA)
 	{
 		this.nombre = nombre;
-    this.correo = correo;
+	  this.correo = correo;
 		this.numero = numero;
-    this.cursoA = cursoA;
+	  this.cursoA = cursoA;
 	}
+
+	public String getNombre()
+	{
+		return nombre;
+	}
+
+	public String getCorreo()
+	{
+		return correo;
+	}
+
+	public String getNum()
+	{
+		return numero;
+	}
+
+
 
   /********************************
      * @param: -
@@ -42,7 +59,7 @@ public class Contacto
      * @return: Regresa si es tutor de matemática, física, química o biología.
      */
   //Regresa el valor entero de cursoA, que servirá para indicar si es tutor de matemática (1), física (2), química (3) o biología (4).
-  public int getCursoA(){
+  public String getCurso(){
     return cursoA;
   }
 }
