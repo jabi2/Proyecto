@@ -45,6 +45,7 @@ class Controlador{
       }
       else if (opcion == 2)
       {
+        //------------------Inicia seteo de las preguntas---------
         CuestionarioUni cues = new CuestionarioUni();
         ArrayList<String> ops = new ArrayList<String>();
 
@@ -104,7 +105,11 @@ class Controlador{
         ops.add("Sí");
         ops.add("No");
         cues.setOpciones(ops);
-        ops = new ArrayList<String>();  
+        ops = new ArrayList<String>();
+        //------------------------Finaliza el seteo--------------
+
+        //Comienzan las preguntas.
+        vista.hacerCuestionario(cues);
       }
       else if (opcion == 3)
       {

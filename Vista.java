@@ -191,34 +191,39 @@ public class Vista{
 
     int op = 0;
     boolean bandera = false;
-
+    scan.skip(System.lineSeparator());
     for (int i = 0; i < c.getPreguntas().size(); i++)
     {
-      System.out.println((i+1) + ". " + c.getPreguntas().get(i));
-
+      bandera = false;
+      System.out.println("\n" + (i+1) + ". " + c.getPreguntas().get(i));
       if (!c.getTipoPreguntas().get(i))
       {
-        for (int j = 0; j < c.getOpciones().get(i-5).size(); j++) System.out.println(c.getOpciones().get(i-5).get(j));
+        for (int j = 0; j < c.getOpciones().get(i-4).size(); j++) System.out.println((j + 1)+ ". " + c.getOpciones().get(i-4).get(j));
 
         while (!bandera)
-        {
-          System.out.print("Ingresa el número de la opción que más se acople a tu persona...");
-          op = scan.nextInt();
+          try
+          {
+            System.out.print("Ingresa el número de la opción que más se acople a tu persona...");
+            op = scan.nextInt();
 
-          if ((op >= 1) && (op <= c.getOpciones().get(i-5).size())) bandera = true;
-          else System.out.println("\nIngresa únicamente números dentro del rango [1, "+ c.getOpciones().get(i-5).size() + "]");
+            if ((op >= 1) && (op <= c.getOpciones().get(i-4).size())) bandera = true;
+            else System.out.println("\nIngresa únicamente números dentro del rango [1, "+ c.getOpciones().get(i-4).size() + "]");
 
-          c.agregarRespuesta(op + "");
-        }
+            c.agregarRespuesta((op-1) + "");
+          }
+          catch (InputMismatchException e)
+          {
+            scan.next();
+            bandera = false;
+            System.out.println("Introduce únicamente números enteros.");
+          }
       }
       else
       {
-        scan.skip(System.lineSeparator());
-        c.agregarRespuesta(scan.next());
+        String res = scan.nextLine();
+        c.agregarRespuesta(res);
       }
     }
-
-    for (int k = 0; k < c.getRespuestas().size(); k++) System.out.println(c.getRespuestas().get(k));
 
     return c.getRespuestas();
   }
