@@ -46,8 +46,65 @@ class Controlador{
       else if (opcion == 2)
       {
         CuestionarioUni cues = new CuestionarioUni();
+        ArrayList<String> ops = new ArrayList<String>();
 
+        cues.setPregunta("¿Cual es su nombre?");
+        cues.setTipo(true);
+
+        cues.setPregunta("¿En qué departamento vive?");
+        cues.setTipo(true);
+
+        cues.setPregunta("¿Cómo te ves en 5 años?");
+        cues.setTipo(true);
+
+        cues.setPregunta("¿Cómo te ves en 10 años?");
+        cues.setTipo(true);
         
+        cues.setPregunta("¿Qué asignaturas le han llamado más la atención en el colegio?");
+        cues.setTipo(false);
+        ops.add("Matemática");
+        ops.add("Productividad y desarrollo");
+        ops.add("Sociales");
+        cues.setOpciones(ops);
+        ops = new ArrayList<String>();
+
+        cues.setPregunta("¿Cuáles son sus intereses y aficiones?");
+        cues.setTipo(false);
+        ops.add("Ser científico");
+        ops.add("Tener un negocio propio");
+        ops.add("Estudiar fenómenos relacionados con el ser humano");
+        cues.setOpciones(ops);
+        ops = new ArrayList<String>();
+
+        cues.setPregunta("¿Qué carrera o carreras tiene en mente para estudiar?");
+        cues.setTipo(false);
+        ops.add("Ingeniería");
+        ops.add("Negocios");
+        ops.add("Ciencias sociales");
+        cues.setOpciones(ops);
+        ops = new ArrayList<String>();
+
+        cues.setPregunta("¿Cómo describiría su trabajo ideal?");
+        cues.setTipo(false);
+        ops.add("En un laboratorio o área de producción");
+        ops.add("En una oficina");
+        ops.add("Trabajo de campo");
+        cues.setOpciones(ops);
+        ops = new ArrayList<String>();
+
+        cues.setPregunta("¿Le gusta la ciencia?");
+        cues.setTipo(false);
+        ops.add("Sí");
+        ops.add("No");
+        cues.setOpciones(ops);
+        ops = new ArrayList<String>();
+
+        cues.setPregunta("¿Le gustan los negocios?");
+        cues.setTipo(false);
+        ops.add("Sí");
+        ops.add("No");
+        cues.setOpciones(ops);
+        ops = new ArrayList<String>();  
       }
       else if (opcion == 3)
       {

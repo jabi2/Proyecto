@@ -13,7 +13,7 @@ public abstract class Cuestionario{
   //Declaración de propiedades.
   private ArrayList<String> preguntas;
 
-  //Nota: si es true, entonces la pregunta es abierta, de lo contrario, es falsa.
+  //Nota: si es true, entonces la pregunta es abierta, de lo contrario, es cerrada.
   private ArrayList<Boolean> tipoPreguntas;
 
   //Para las preguntas cerradas.
