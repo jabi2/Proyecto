@@ -4,7 +4,7 @@ Clase Controlador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Controlador del programa
 Version: 1.0
-Ultima actualizacion: 3 de octubre
+Ultima actualizacion: 24 de octubre
 ******************************************************************/
 import java.util.ArrayList;
 class Controlador{
@@ -110,6 +110,7 @@ class Controlador{
 
         //Comienzan las preguntas.
         vista.hacerCuestionario(cues);
+        vista.imprimirSugerencia(cues);
       }
       else if (opcion == 3)
       {
