@@ -110,7 +110,7 @@ class Controlador{
 
         //Comienzan las preguntas.
         vista.hacerCuestionario(cues);
-        vista.imprimirSugerencia(cues);
+        //vista.imprimirSugerencia(cues);
       }
       else if (opcion == 3)
       {

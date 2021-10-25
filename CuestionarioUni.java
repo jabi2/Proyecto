@@ -46,7 +46,7 @@ public class CuestionarioUni extends Cuestionario{
     getRespuestas().add(r);
   }
 
-public int getUniIndex() {
+/*public int getUniIndex() {
         var uni_index = 0;
         var respuesta = 0;
         ArrayList<String> matIndex = this.getRespuestas();
@@ -104,6 +104,6 @@ public int getUniIndex() {
             }
         }
         return uni_index;
-    }
+    }*/
 
 }

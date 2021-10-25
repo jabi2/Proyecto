@@ -228,11 +228,11 @@ public class Vista{
     return c.getRespuestas();
   }
 
-  public void imprimirSugerencia(CuestionarioUni cues){
+  /*public void imprimirSugerencia(CuestionarioUni cues){
     if(cues.getUniIndex() >= 155){
       System.out.println("Se le recomienda buscar info en UVG");
     } else if(cues.getUniIndex()<155){
       System.out.println("Se le recomienda buscar info en USAC o universidades afiliadas");
     }
-  }
+  }*/
 }
