@@ -4,9 +4,10 @@ Clase Controlador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Maneja la creación de los contactos y los guarda en una lista de arreglos dinámica.
 Version: 1.2
-Ultima actualizacion: 10 de octubre
+Ultima actualizacion: 7 de noviembre 2021
 ******************************************************************/
 
+//Esta clase se encuentra obsoleta actualmente ya que ya se creo una clase que lea esta misma informacion de un archivo csv
 import java.util.ArrayList;
 public class Libreta{
 	private ArrayList<Contacto> contactoss;

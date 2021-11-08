@@ -4,18 +4,14 @@ Clase Guardador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Permite extraer los contactos de un archivo en donde estén guardados y así utilizarlos en el programa. 
 Version: 1.2
-Ultima actualizacion: 23 de octubre
+Ultima actualizacion: 7 de noviembre
 ******************************************************************/
 
-/**
-Placeholder por que se requiere investigar más acerca de la clase File y así importarla y utilizarla aca. Investigación en proceso.
-**/
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 public class Guardador{
 
 	private String path = "Tutores.csv";
@@ -56,15 +52,11 @@ public class Guardador{
 			curso = values[3];
 			Contacto ContactoActual = new Contacto(nombre, email, tel, curso);
 			contactos[x] = ContactoActual;
-			System.out.println("\n");
-			System.out.println(contactos[x].getNombre());
-			System.out.println(contactos[x].getNum());
-			System.out.println(contactos[x].getCorreo());
-			System.out.println(contactos[x].getCurso());
+
 			x = x+1;
 		}
 
-		//Bloques de catch para detener el codigo cuando el archivo se acaba
+		//Bloques de catch para detener el codigo cuando el archivo se acaba o no se encuentra
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	} catch (IOException e) {
