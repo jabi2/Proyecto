@@ -106,7 +106,7 @@ class Controlador{
         ops.add("No");
         cues.setOpciones(ops);
         ops = new ArrayList<String>();
-        //------------------------Finaliza el seteo--------------
+        //------------------------Finaliza el setteo--------------
 
         //Comienzan las preguntas.
         vista.hacerCuestionario(cues);
@@ -114,12 +114,14 @@ class Controlador{
       }
       else if (opcion == 3)
       {
-        Libreta lb = new Libreta();
+        int op = vista.queCurso();
+        Guardador g = new Guardador();
         
-        int eleccion = 0;
-        eleccion = vista.queCurso();
+        ArrayList<Contacto> t = new ArrayList<Contacto>();
 
-        vista.mostrarTutores(eleccion, lb.getLibretaC());
+        t = g.getTutos(op);
+
+        vista.mostrarTutores(op, t);
       }
       else if (opcion == 4) vista.despedida();
       else vista.valid1();

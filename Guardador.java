@@ -12,6 +12,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+
 public class Guardador{
 
 	private String path = "Tutores.csv";
@@ -72,23 +74,17 @@ public class Guardador{
 		return contactos[c];
 	}
 
-	public void getTutos(int c)
+	public ArrayList<Contacto> getTutos(int c)
 	{
+    ArrayList<Contacto> tutos = new ArrayList<Contacto>();
+
 		p = 0;
-		try {
-			while (p < x)
-			{
-				if (c == contactos[p].getCurso())
-				{
-					System.out.println(contactos[p]);
-				}
-				else {
-					p = p+1;
-				}
-			} 
-		} catch (Exception e){
-			System.out.println("");
-		}
+
+		while (p < contactos.length)
+			if (c == contactos[p].getCurso()) tutos.add(contactos[p]);
+			else p++;
+
+    return tutos;
 	}
 }
 //Documentacion de la clase BufferedReader: https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html

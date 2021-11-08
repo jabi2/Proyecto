@@ -179,12 +179,14 @@ public class Vista{
     int cont = 1;
 
     for (int j = 0; j < v.size(); j++)
-      if (Integer.parseInt(v.get(j).getCurso()) == i)
+      if (v.get(j).getCurso() == i)
       {
         System.out.println(cont + ". " + v.get(j).toString() + "\n");
         cont++;
       }
   }
+
+  
 
   public ArrayList<String> hacerCuestionario(CuestionarioUni c){
     System.out.println("A continuación, se te harán unas preguntas para que te podamos aconsejar sobre tu carrera universitaria.\nSé honesto");
