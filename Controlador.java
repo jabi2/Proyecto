@@ -6,6 +6,8 @@ Descripcion: Controlador del programa
 Version: 1.0
 Ultima actualizacion: 24 de octubre
 ******************************************************************/
+//NOTA IMPORTANTE: Las funciones de leer csv y abrir páginas web solo se llevan a cabo cuando el programa está descargado en el ordenador.
+
 import java.util.ArrayList;
 class Controlador{
   public static void main(String[] args){
@@ -116,7 +118,7 @@ class Controlador{
       {
         int op = vista.queCurso();
         Guardador g = new Guardador();
-        
+
         ArrayList<Contacto> t = new ArrayList<Contacto>();
 
         t = g.getTutos(op);

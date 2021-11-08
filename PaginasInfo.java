@@ -6,6 +6,7 @@ Descripcion: Clase que se encargará de guardar y abrir los links de las paginas
 Version: 1.0
 Ultima actualizacion: 10 de octubre
 ******************************************************************/
+//NOTA IMPORTANTE: La funcionalidad de abrir páginas web solo aplica cuando el programa está descargado en la computadora.
 
 import java.awt.Desktop;
 import java.net.URI;
