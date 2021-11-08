@@ -17,12 +17,14 @@ public class Guardador{
 	private String path = "Tutores.csv";
 	private String line = "";
 	private int x = 1;
+	private int p = 0;
 	private String[] values = new String[20];
 	private Contacto contactos[] = new Contacto[15];
 	private String nombre;
 	private String email;
 	private String tel;
 	private String curso;
+	private int cursoA;
 
 
   /********************************
@@ -50,7 +52,8 @@ public class Guardador{
 			email = values[1];
 			tel = values[2];
 			curso = values[3];
-			Contacto ContactoActual = new Contacto(nombre, email, tel, curso);
+			cursoA = Integer.parseInt(curso);
+			Contacto ContactoActual = new Contacto(nombre, email, tel, cursoA);
 			contactos[x] = ContactoActual;
 
 			x = x+1;
@@ -62,6 +65,30 @@ public class Guardador{
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
+	}
+
+	public Contacto getContacto(int c)
+	{
+		return contactos[c];
+	}
+
+	public void getTutos(int c)
+	{
+		p = 0;
+		try {
+			while (p < x)
+			{
+				if (c == contactos[p].getCurso())
+				{
+					System.out.println(contactos[p]);
+				}
+				else {
+					p = p+1;
+				}
+			} 
+		} catch (Exception e){
+			System.out.println("");
+		}
 	}
 }
 //Documentacion de la clase BufferedReader: https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html

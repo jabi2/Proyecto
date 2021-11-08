@@ -13,14 +13,14 @@ public class Contacto
   private String nombre;
   private String correo;
   private String numero;
-  private String cursoA;
+  private int cursoA;
 
   /********************************
      * @param: El nombre, correo, número y número del curso que da el tutor.
      * @return: -
      */
   //Constructor de la clase.
-	public Contacto(String nombre, String correo, String numero, String cursoA)
+	public Contacto(String nombre, String correo, String numero, int cursoA)
 	{
 		this.nombre = nombre;
 	  this.correo = correo;
@@ -59,7 +59,7 @@ public class Contacto
      * @return: Regresa si es tutor de matemática, física, química o biología.
      */
   //Regresa el valor entero de cursoA, que servirá para indicar si es tutor de matemática (1), física (2), química (3) o biología (4).
-  public String getCurso(){
+  public int getCurso(){
     return cursoA;
   }
 }
