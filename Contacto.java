@@ -22,6 +22,7 @@ public class Contacto
   //Constructor de la clase.
 	public Contacto(String nombre, String correo, String numero, int cursoA)
 	{
+    //Asignación de valores a las propiedades de la clase.
 		this.nombre = nombre;
 	  this.correo = correo;
 		this.numero = numero;
