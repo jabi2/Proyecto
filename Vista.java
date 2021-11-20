@@ -115,10 +115,11 @@ public class Vista{
     while (!bandera)
       try
       {
-        System.out.print("\n¿Qué número de curso quieres estudiar?");
+        System.out.print("\n¿Qué número de curso quieres estudiar? ");
         op = scan.nextInt();
 
-        if ((op >= 1) && (op <= 12)) bandera = true;
+        //Rango de opciones entre 1 y 10 porque ese es el número de cursos que se ofrece.
+        if ((op >= 1) && (op <= 10)) bandera = true;
         else System.out.println("\nIngresa únicamente números enteros dentro del rango [1, 12].");
       }
       catch (InputMismatchException e)
