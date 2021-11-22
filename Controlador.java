@@ -3,7 +3,7 @@ Proyecto POO
 Clase Controlador
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Controlador del programa
-Version: 1.0
+Version: 2.0
 Ultima actualizacion: 21 de noviembre de 2021
 ******************************************************************/
 //NOTA IMPORTANTE: Las funciones de leer csv y abrir páginas web solo se llevan a cabo cuando el programa está descargado en el ordenador.
