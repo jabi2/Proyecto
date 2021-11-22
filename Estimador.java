@@ -11,7 +11,7 @@ public interface Estimador {
 
     /**
      *
-     * @param c
+     * @param c - CuestionarioUni
      * @return
      */
     public double getUniIndex(CuestionarioUni c);

@@ -188,7 +188,10 @@ public class Vista implements Estimador{
   }
 
   
-
+  /********************************
+     * @param: El cuestionario de universidad, construído con sus preguntas y opciones de respuesta.
+     * @return: Respuestas del cuestionario - ArrayList<String>
+     */
   public ArrayList<String> hacerCuestionario(CuestionarioUni c){
     System.out.println("A continuación, se te harán unas preguntas para que te podamos aconsejar sobre tu carrera universitaria.\nSé honesto");
     Scanner scan1 = new Scanner(System.in);
@@ -230,7 +233,10 @@ public class Vista implements Estimador{
 
     return c.getRespuestas();
   }
-
+    /********************************
+     * @param: index, número en decimales que indica la posibilidad de recomendarle al usuario una u otra universidad
+     * @return -
+     */
     public void recomendar(double index){
         try{
             if(index >= 22.5 && index <= 30){
@@ -253,6 +259,10 @@ public class Vista implements Estimador{
             System.out.println(e);
         }
     }
+    /********************************
+     * @param: c - Cuestionario univesitario con las respuestas del usuario ya añadidas.
+     * @return indice - Numero decimal, que ayuda al programa a recomendar una universidad al usuario.
+     */
     @Override
     public double getUniIndex(CuestionarioUni c) {
         double indice = 0;
