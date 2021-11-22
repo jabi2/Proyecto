@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 
-public class Vista{
+public class Vista implements Estimador{
   private Scanner scan;
 
   /********************************
@@ -191,10 +191,10 @@ public class Vista{
 
   public ArrayList<String> hacerCuestionario(CuestionarioUni c){
     System.out.println("A continuación, se te harán unas preguntas para que te podamos aconsejar sobre tu carrera universitaria.\nSé honesto");
+    Scanner scan1 = new Scanner(System.in);
 
     int op = 0;
     boolean bandera = false;
-    scan.skip(System.lineSeparator());
     for (int i = 0; i < c.getPreguntas().size(); i++)
     {
       bandera = false;
@@ -207,23 +207,23 @@ public class Vista{
           try
           {
             System.out.print("Ingresa el número de la opción que más se acople a tu persona...");
-            op = scan.nextInt();
+            op = scan1.nextInt();
 
             if ((op >= 1) && (op <= c.getOpciones().get(i-4).size())) bandera = true;
             else System.out.println("\nIngresa únicamente números dentro del rango [1, "+ c.getOpciones().get(i-4).size() + "]");
 
-            c.agregarRespuesta((op-1) + "");
+            c.agregarRespuesta((op) + "");
           }
           catch (InputMismatchException e)
           {
-            scan.next();
+            scan1.next();
             bandera = false;
             System.out.println("Introduce únicamente números enteros.");
           }
       }
       else
       {
-        String res = scan.nextLine();
+        String res = scan1.nextLine();
         c.agregarRespuesta(res);
       }
     }
@@ -231,11 +231,41 @@ public class Vista{
     return c.getRespuestas();
   }
 
-  /*public void imprimirSugerencia(CuestionarioUni cues){
-    if(cues.getUniIndex() >= 155){
-      System.out.println("Se le recomienda buscar info en UVG");
-    } else if(cues.getUniIndex()<155){
-      System.out.println("Se le recomienda buscar info en USAC o universidades afiliadas");
+    public void recomendar(double index){
+        try{
+            if(index >= 22.5 && index <= 30){
+                System.out.println("\n**********Le recomendamos solicitar informacion en UVG**********");
+            } else if (index >= 20 && index < 22.5){
+                System.out.println("\n**********Le recomendamos solicitar informacion en USAC**********");
+            } else if (index >= 17.5 && index < 20){
+                System.out.println("\n**********Le recomendamos solicitar informacion en URL**********");
+            } else if (index >= 12.5 && index < 17.5){
+                System.out.println("\n**********Le recomendamos solicitar informacion en UFM**********");
+            } else if (index > 0 && index < 15.5){
+                System.out.println("\n**********Le recomendamos solicitar informacion en UNIS**********");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
-  }*/
+    @Override
+    public double getUniIndex(CuestionarioUni c) {
+        double indice = 0;
+        try{
+            for(int i = 4; i < c.getRespuestas().size(); i ++){
+                if(Integer.parseInt(c.getRespuestas().get(i)) == 1){
+                    indice = indice + 5;
+                } else if (Integer.parseInt(c.getRespuestas().get(i)) == 2){
+                    indice = indice + 2.5;
+                } else if (Integer.parseInt(c.getRespuestas().get(i)) == 3){
+                    indice = indice + 1.5;
+                }
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        return indice;
+    }
+
+
 }
