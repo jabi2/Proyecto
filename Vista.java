@@ -4,7 +4,7 @@ Clase Vista
 Autores: Javier Bocanegra, Lucy Elías, Juan Marroquín y Herber Silva.
 Descripcion: Vista del programa, permite al usuario interactuar con el programa y mostrar informacion relevante.
 Version: 1.0
-Ultima actualizacion: 3 de octubre
+Ultima actualizacion: 21 de noviembre
 ******************************************************************/
 /*Se importa scanner para poder leer los datos ingresados por el usuario*/
 import java.util.Scanner;
@@ -235,14 +235,19 @@ public class Vista implements Estimador{
         try{
             if(index >= 22.5 && index <= 30){
                 System.out.println("\n**********Le recomendamos solicitar informacion en UVG**********");
+                PaginasInfo.openWebpage("https://www.uvg.edu.gt/");
             } else if (index >= 20 && index < 22.5){
                 System.out.println("\n**********Le recomendamos solicitar informacion en USAC**********");
+                PaginasInfo.openWebpage("https://www.usac.edu.gt/");
             } else if (index >= 17.5 && index < 20){
                 System.out.println("\n**********Le recomendamos solicitar informacion en URL**********");
+                PaginasInfo.openWebpage("https://www.principal.url.edu.gt/");
             } else if (index >= 12.5 && index < 17.5){
                 System.out.println("\n**********Le recomendamos solicitar informacion en UFM**********");
+                PaginasInfo.openWebpage("https://www.ufm.edu/");
             } else if (index > 0 && index < 15.5){
                 System.out.println("\n**********Le recomendamos solicitar informacion en UNIS**********");
+                PaginasInfo.openWebpage("https://www.unis.edu.gt/");
             }
         }catch(Exception e){
             System.out.println(e);
